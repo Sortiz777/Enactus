@@ -1,0 +1,214 @@
+The provided HTML code appears to be part of a slideshow or image carousel. Let's break down the elements within this code snippet:
+
+1. `<div class="mySlides fade" style="text-align:center">`:
+   - This is a `<div>` element with several attributes and inline CSS styles applied to it.
+   - `class="mySlides fade"`: This assigns two CSS classes, "mySlides" and "fade," to the `<div>`. These classes are likely used for styling or functionality with JavaScript or CSS.
+   - `style="text-align:center"`: This inline style centers the content of this `<div>` horizontally within its containing element.
+
+2. `<div class="numbertext"></div>`:
+   - This is another `<div>` element with the CSS class "numbertext." This element may be used to display a numerical indicator or caption for the image within the slideshow. Currently, it doesn't contain any visible content.
+
+3. `<img src="https://i.postimg.cc/wTkrqPjT/image.png" style="width:60%" class="imagen" alt="imagen">`:
+   - This is an `<img>` element that displays an image.
+   - `src="https://i.postimg.cc/wTkrqPjT/image.png"`: This attribute specifies the image source, which is a URL pointing to an image file.
+   - `style="width:60%"`: This inline style sets the width of the image to 60% of its containing element, likely for responsive design.
+   - `class="imagen"`: The "imagen" class is applied to this image, allowing for further styling or JavaScript functionality.
+   - `alt="imagen"`: This attribute provides alternative text for the image, which is displayed if the image cannot be loaded. In this case, the alternative text is "imagen."
+
+4. `<div class="text"></div>`:
+   - This is yet another `<div>` element with the CSS class "text." Similar to the "numbertext" element, it currently doesn't contain any visible content.
+
+In summary, this HTML code represents a slide in a slideshow/carousel. It includes an image with some associated classes and styles for layout and presentation, as well as two empty `<div>` elements with the classes "numbertext" and "text," which may be intended for displaying additional information, captions, or numerical indicators in the slideshow.
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+
+function firstSlideShow(){
+
+  let i;
+  let slides = document.getElementsByClassName("mySlides"); // get the DOM element of the slideshows containers
+  let dots = document.getElementsByClassName("dot"); // get the DOM element of the slideshow dots
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+
+  //////This piece of code activate and deactivate the dots on the slide show
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", ""); //this activates the new dot and deactivate the older one
+  }
+
+  ////
+
+
+  
+  slides[slideIndex-1].style.display = "block"; //this piece of code is the one who displays the images in the slideshows 
+  dots[slideIndex-1].className += " active";// iterates each dot
+  setTimeout(showSlides, 6000); // Change image every 5 seconds
+}
+
+
+
+
+
+z
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+<section>
+    
+        <h2>Que es Lady Bee?</h2>
+
+        <p>Lady Bee. Empresa social que busca aumentar los
+            espacios para el desarrollo y la
+            conservación de la abeja nativa.</p>
+
+        <img src="https://i.postimg.cc/ZR5rn0Nt/informacion-Lady-Bee.jpg" alt="Imagen de Informacion de Enactus.....">
+    
+    
+</section>
+
+<footer class="footerNoDefault">
+
+    <header class="headerDeAbajo">
+        <br> 
+        <div>
+                  <a href="https://www.facebook.com/enactus" title="Website name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </svg></a>
+            <a href="https://www.instagram.com/enactuspr/" title="Website name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </svg></a>
+              <footer> 
+              <p>&copy; 2023 Enactus.</p>
+            </footer>
+          </div>
+            </footer>
+            </header>
+    </header>
+
+
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+  <header>
+<img src="https://i.postimg.cc/9FwBS95t/image.png" class="Logo"alt="Logo Inter Enactus">
+
+      <h1>Enactus Universidad Interamericana Bayamon</h1>
+      <br>
+    </header>
+    
+          <ul>
+  <li><a href="../html/Enactus.html">Enactus</a></li>
+  <li><a href="../html/One for the Deaf.html">One For The Deaf</a></li>
+  <li><a href="../html/Boreal.html">Boreal</a></li>
+  <li><a href="../html/Lady Bee.html">Lady bee</a></li>
+</ul>
+    </header>
+    <br>
+      <section>
+        <h2>¿Que es Enactus?</h2>
+        <p>Enactus Inter Bayamon es un capitulo estudiandil establecido en 2020 en la universidad InterAmericana recinto de Bayamón de Enactus Puerto Rico la cual apoya el desarrollo de los talentos de nuestros estudiantes a través de diversos programas de capacitación que los impulsan a crecer en el escenario personal, académico y profesional.  Asimismo, le brindamos exposición y apertura al campo laboral.  Nuestros líderes desarrollan proyectos y empresas de impacto social, económico, ambiental y de innovación en diversas comunidades.</p>
+      </section>
+   
+      <article class="cta">
+	<img src="https://i.postimg.cc/GpcJPpkz/logo-One-For-The-Deaf.jpg" alt="Logo One for the Deaf"> 
+	<div class="cta__text-column">
+		<h2> ¿Que es "One For The Deaf"?</h2>
+		<p>One For The Deaf, es una empresa social que a través de la arteterapia y el “upcycling” de ropa denim se dedica a fomentar el desarrollo de empleos para jóvenes de la comunidad sorda con el objetivo de lograr la concientización e integración entre esta comunidad y la oyente.</p>
+	</div>
+</article> 
+    <br>
+      <article class="cta">
+	<img src="https://i.postimg.cc/d12DcDsR/image.png" alt="Logo Lady Bee"> 
+	<div class="cta__text-column">
+		<h2> ¿Que es "Lady Bee"?</h2>
+		<p>Ladybee es una empresa social enfocada en aumentar los espacios para la conservación de las abejas, generar ingresos a través de la producción de miel y promover la conciencia sobre la importancia de las abejas.</p>
+    <p>La empresa ha establecido dos pilares para su proyecto: espacios para la conservación y la formación de una nueva generación de líderes apícolas. Ladybee ha integrado al apicultor experto Dr. Bert, apicultor experto en el desarrollo de programas educativos y de plantación de colmenas, con los que hemos fundamentado los dos pilares del proyecto: espacios de conservación para las abejas y formación de una nueva generación de líderes en el campo.</p> 
+    
+    <p>A pesar de los desafíos que presenta la pandemia, Ladybee ha capacitado a 15 estudiantes universitarios y ha habilitado un espacio en una finca para desarrollar habilidades apícolas y generar una población inicial de 240,000 abejas y 1,200 libras de miel.</p>
+	</div>
+</article> 
+    
+    <br>
+    <article class="cta">
+	<img src="https://i.postimg.cc/MTSK5x7n/image.png" alt="Logo Boreal "> 
+	<div class="cta__text-column">
+		<h2> ¿Que es "Boreal"?</h2>
+		<p>Boreal es
+una empresa social que busca desarrollar a traves del 3D Printing y tecnicas manuales diverss productos con el plástico recolectado de las costas de Puerto Rico.  A su vez creando un movimiento para preservar los ecosistemas marinos mediante una campana educativa. Este proyecto esta liderado po Angelie M. Torres Bonet (Presidenta de enactus) y Yanira Colon Lamboy (Secretaria de enactus). </p>
+	</div>
+</article> 
+  <br>
+
+    <footer>
+
+<header class = "headerDeAbajo"> 
+<br> 
+<div>
+          <a href="https://www.facebook.com/enactus" title="Website name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg></a>
+    <a href="https://www.instagram.com/enactuspr/" title="Website name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+</svg></a>
+      <footer> 
+      <p>&copy; 2023 Enactus.</p>
+    </footer>
+  </div>
+    </footer>
+    </header>
+
+
+
+
+      <section class="galeria">
+        <!-- Galeria de imagenes -->
+        <h2>Taller</h2>
+      </section>
