@@ -1,29 +1,41 @@
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;
-height: 100vh;
-margin: 0;
-padding: 0;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 
 }
-.mySlides {display: none;}
-img {vertical-align: middle;}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
 
 
 
-.imagen{
+.imagen {
   max-width: 500px;
 }
+
 /*flex box */
 
 /* Galeria */
 
-section.galeria{
+section.galeria {
   display: flex;
   /* Taman~o del section */
   width: 1000px;
   height: 400px;
 }
-section.galeria > .imagenGaleria{
+
+section.galeria>.imagenGaleria {
   /* Encoge el section con la imagen para que de un efecto de transition con la animacion */
   width: 0px;
   flex-grow: 1;
@@ -31,112 +43,120 @@ section.galeria > .imagenGaleria{
   opacity: .8;
   transition: .5s ease;
 }
-section.galeria > .imagenGaleria:hover{
-cursor: crosshair;
-/* Esto decide hasta cuanto va a expandir */
-width: 50%;  
 
-opacity: 1;
-filter: contrast(120%);
+section.galeria>.imagenGaleria:hover {
+  cursor: crosshair;
+  /* Esto decide hasta cuanto va a expandir */
+  width: 50%;
+
+  opacity: 1;
+  filter: contrast(120%);
 }
 
 
 
 /* Hasta aqui es el codigo de la galeria */
 header {
-  display:flex;
-  min-height:70px;
+  display: flex;
+  min-height: 70px;
   background-color: #36b34b;
-  color:black;
+  color: black;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  
-  }
-  
-  img{
-    object-fit: scale-down;
-    width: 450px;
-  }
-  header h1 {
-    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+
+}
+
+img {
+  width: 450px;
+}
+
+header h1 {
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  color:white;
+  color: white;
   font-size: 36px;
   text-transform: arial;
-  
-  }
-  header p {
-  
-  color: white ;
-  }
-  .p1{
-  text-align: center;
-  }
-  h2{
-    margin-top: 2%;
-    font-size: 3rem;
-    text-align: center;
 
-  }
-  .h1Boreal{
-    margin-top: 2%;
-    font-size: 3rem;
-    text-align: center;
-  }
-  p {
+}
+
+header p {
+
+  color: white;
+}
+
+.p1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 2%;
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+.h1Boreal {
+  margin-top: 2%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
   text-transform: arial;
   color: black;
   font-size: 26px;
   text-align: justify;
   margin: 1rem;
-  }
-  
-  body{
+}
+
+body {
   background-color: #fff6ed;
   color: black;
-  }
-  .Logo{
-  height: 100px;
-  width: 100px;
-  }
-  .LogoEnactus{
-    height: auto;
-    width: 140px;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #008100;
+}
+
+.Logo {
+  height: 150px;
+  width: 150px;
+}
+
+.LogoEnactus {
+  height: auto;
+  width: 140px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #008100;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-  1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  }
-  
-  li {
-    float: left;
-  
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+li {
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
 
 
 
-  /*Anadir Flechas (slider) al Slide Show para pasar manualmente*/
-  /* .prev, .next {
+/*Anadir Flechas (slider) al Slide Show para pasar manualmente*/
+/* .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -149,8 +169,8 @@ header {
     border-radius: 0 3px 3px 0;
     user-select: none;
   } */
-  
-  /* .prev {
+
+/* .prev {
     left: 0;
   }
   
@@ -160,7 +180,7 @@ header {
    */
 
 
- 
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -211,129 +231,146 @@ header {
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .text {
+    font-size: 11px
+  }
 }
-   
 
-.headerDeAbajo{
+
+.headerDeAbajo {
   background-color: black;
   display: flex;
   text-align: center;
   justify-content: space-between;
-  }
+}
 
-.footerEnactus{
+.footerEnactus {
   margin-top: 15px;
-   padding:2px;
+  padding: 2px;
   bottom: 0;
-  position:relative;
+  position: relative;
   width: 100%;
-}  
+}
 
-.imgContent{
+.imgContent {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.espacio{
+
+.espacio {
   margin: 1rem;
 }
-.espacio-2-rem{
+
+.espacio-2-rem {
   margin: 2rem;
 }
-.flexcenter{
+
+.flexcenter {
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
-.displayInBlock{
+.displayInBlock {
   display: block;
   width: 100%;
 
 }
-.textAlignCenter{
+
+.textAlignCenter {
   text-align: center;
 }
-.textAlignLeft{
+
+.textAlignLeft {
   text-align: left;
 }
-h1{
+
+h1 {
   font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 600px) {
-  body{
+  body {
     height: 100vh;
     margin: 0;
   }
-header{
-  display: block;
-}
+
+  header {
+    display: block;
+  }
 
   ul li {
-      display: block;
-      margin: 10px 0;
+    display: block;
+    margin: 10px 0;
   }
-  p{
+
+  p {
     font-size: 16px;
   }
+
   article.cta img {
-      max-width: 100%;
+    max-width: 100%;
+    
   }
-.footerEnactus{
- position: relative;
- bottom: 0;
 
-}
+  .footerEnactus {
+    position: relative;
+    bottom: 0;
+
+  }
+
   footer.footerEnactus img.Logo {
-      max-width: 100%;
-      
+    max-width: 100%;
+
   }
 
- 
+
   section.galeria {
 
     display: none;
-    
+
   }
 
-  section.galeria > .imagenGaleria {
+  section.galeria>.imagenGaleria {
     display: none;
-     
-    
-  }
-.galeria-responsive{
-   display: block;
-  background: none;
-}
-.imagen-info-lady-bee{
-  height: fit-content;
-  width: fit-content;
 
-}
+
+  }
+
+  .galeria-responsive {
+    display: block;
+    background: none;
+  }
+
+  .imagen-info-lady-bee {
+    height: fit-content;
+    width: fit-content;
+
+  }
 }
 
 @media only screen and (min-width: 601px) {
-  .galeria-responsive{
-    display:none;
+  .galeria-responsive {
+    display: none;
   }
 
-  .imagen-info-lady-bee{
+  .imagen-info-lady-bee {
     height: fit-content;
     width: fit-content;
-  
+
   }
 }
-
-
-
-
