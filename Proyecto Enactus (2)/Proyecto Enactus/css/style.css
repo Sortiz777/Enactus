@@ -147,6 +147,24 @@ ul
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
 
+.slide-in-text 
+{
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn 
+{
+  from 
+  {
+    margin-left: 100%;
+  }
+  
+  to 
+  {
+    margin-left: 0%;
+  }
+}
+
 li 
 {
   float: left;
