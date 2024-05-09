@@ -1,8 +1,10 @@
-* {
+* 
+{
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   font-family: Verdana, sans-serif;
   height: 100vh;
   margin: 0;
@@ -10,17 +12,18 @@ body {
 
 }
 
-.mySlides {
+.mySlides 
+{
   display: none;
 }
 
-img {
+img 
+{
   vertical-align: middle;
 }
 
-
-
-.imagen {
+.imagen 
+{
   max-width: 500px;
 }
 
@@ -28,14 +31,16 @@ img {
 
 /* Galeria */
 
-section.galeria {
+section.galeria 
+{
   display: flex;
   /* Taman~o del section */
   width: 1000px;
   height: 400px;
 }
 
-section.galeria>.imagenGaleria {
+section.galeria>.imagenGaleria 
+{
   /* Encoge el section con la imagen para que de un efecto de transition con la animacion */
   width: 0px;
   flex-grow: 1;
@@ -44,7 +49,8 @@ section.galeria>.imagenGaleria {
   transition: .5s ease;
 }
 
-section.galeria>.imagenGaleria:hover {
+section.galeria>.imagenGaleria:hover 
+{
   cursor: crosshair;
   /* Esto decide hasta cuanto va a expandir */
   width: 50%;
@@ -54,9 +60,9 @@ section.galeria>.imagenGaleria:hover {
 }
 
 
-
 /* Hasta aqui es el codigo de la galeria */
-header {
+header 
+{
   display: flex;
   min-height: 70px;
   background-color: #36b34b;
@@ -67,42 +73,47 @@ header {
 
 }
 
-img {
+img 
+{
   width: 450px;
 }
 
-header h1 {
+header h1 
+{
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
   color: white;
   font-size: 36px;
-  text-transform: arial;
-
+  text-transform: Times;
 }
 
-header p {
+header p 
+{
 
   color: white;
 }
 
-.p1 {
+.p1 
+{
   text-align: center;
 }
 
-h2 {
-  margin-top: 2%;
-  font-size: 3rem;
-  text-align: center;
-
-}
-
-.h1Boreal {
+h2 
+{
   margin-top: 2%;
   font-size: 3rem;
   text-align: center;
 }
 
-p {
+.h1Boreal 
+{
+  margin-top: 2%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+p 
+{
   text-transform: arial;
   color: black;
   font-size: 26px;
@@ -110,22 +121,26 @@ p {
   margin: 1rem;
 }
 
-body {
+body 
+{
   background-color: #fff6ed;
   color: black;
 }
 
-.Logo {
+.Logo 
+{
   height: 150px;
   width: 150px;
 }
 
-.LogoEnactus {
+.LogoEnactus 
+{
   height: auto;
   width: 140px;
 }
 
-ul {
+ul 
+{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -135,12 +150,13 @@ ul {
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
 
-li {
+li 
+{
   float: left;
-
 }
 
-li a {
+li a 
+{
   display: block;
   color: white;
   text-align: center;
@@ -149,10 +165,10 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+li a:hover 
+{
   background-color: #111;
 }
-
 
 
 /*Anadir Flechas (slider) al Slide Show para pasar manualmente*/
@@ -183,14 +199,16 @@ li a:hover {
 
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container
+ {
   max-width: 500px;
   position: relative;
   margin: auto;
 }
 
 /* Caption text */
-.text {
+.text 
+{
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -201,7 +219,8 @@ li a:hover {
 }
 
 /* Number text (1/8 etc) */
-.numbertext {
+.numbertext 
+{
   color: black;
   font-size: 12px;
   padding: 8px 12px;
@@ -210,7 +229,8 @@ li a:hover {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot 
+{
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -220,42 +240,50 @@ li a:hover {
   transition: background-color 5s ease;
 }
 
-.active {
+.active 
+{
   background-color: #717171;
 }
 
 /* Fading animation */
-.fade {
+.fade 
+{
   animation-name: fade;
   animation-duration: 5s;
 }
 
-@keyframes fade {
-  from {
+@keyframes fade 
+{
+  from 
+  {
     opacity: .4
   }
 
-  to {
+  to 
+  {
     opacity: 1
   }
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
+@media only screen and (max-width: 300px) 
+{
+  .text 
+  {
     font-size: 11px
   }
 }
 
-
-.headerDeAbajo {
+.headerDeAbajo 
+{
   background-color: black;
   display: flex;
   text-align: center;
   justify-content: space-between;
 }
 
-.footerEnactus {
+.footerEnactus 
+{
   margin-top: 15px;
   padding: 2px;
   bottom: 0;
@@ -263,114 +291,125 @@ li a:hover {
   width: 100%;
 }
 
-.imgContent {
+.imgContent 
+{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.espacio {
+.espacio 
+{
   margin: 1rem;
 }
 
-.espacio-2-rem {
+.espacio-2-rem 
+{
   margin: 2rem;
 }
 
-.flexcenter {
+.flexcenter 
+{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.displayInBlock {
+.displayInBlock 
+{
   display: block;
   width: 100%;
-
 }
 
-.textAlignCenter {
+.textAlignCenter 
+{
   text-align: center;
 }
 
-.textAlignLeft {
+.textAlignLeft 
+{
   text-align: left;
 }
 
-h1 {
+h1 
+{
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
+@media only screen and (max-width: 600px) 
+{
+  body 
+  {
     height: 100vh;
     margin: 0;
   }
 
-  header {
+  header 
+  {
     display: block;
   }
 
-  ul li {
+  ul li 
+  {
     display: block;
     margin: 10px 0;
   }
 
-  p {
+  p 
+  {
     font-size: 16px;
   }
 
-  article.cta img {
+  article.cta img 
+  {
     max-width: 100%;
-    
   }
 
-  .footerEnactus {
+  .footerEnactus 
+  {
     position: relative;
     bottom: 0;
-
   }
 
-  footer.footerEnactus img.Logo {
+  footer.footerEnactus img.Logo 
+  {
     max-width: 100%;
-
   }
 
-
-  section.galeria {
-
+  section.galeria 
+  {
     display: none;
-
   }
 
-  section.galeria>.imagenGaleria {
+  section.galeria>.imagenGaleria 
+  {
     display: none;
-
-
   }
 
-  .galeria-responsive {
+  .galeria-responsive 
+  {
     display: block;
     background: none;
   }
 
-  .imagen-info-lady-bee {
+  .imagen-info-lady-bee 
+  {
     height: fit-content;
     width: fit-content;
-
   }
 }
 
-@media only screen and (min-width: 601px) {
-  .galeria-responsive {
+@media only screen and (min-width: 601px) 
+{
+  .galeria-responsive 
+  {
     display: none;
   }
 
-  .imagen-info-lady-bee {
+  .imagen-info-lady-bee 
+  {
     height: fit-content;
     width: fit-content;
-
   }
 }
