@@ -218,34 +218,6 @@ li a:hover
   background-color: #111;
 }
 
-
-/*Anadir Flechas (slider) al Slide Show para pasar manualmente*/
-/* .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  } */
-
-/* .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-   */
-
-
-
-
 /* Slideshow container */
 .slideshow-container
 {
@@ -461,4 +433,78 @@ h1
     height: fit-content;
     width: fit-content;
   }
+}
+
+
+h1 
+{
+  transform: translateY(6rem);
+  animation: up 500ms linear forwards;
+  z-index: 1;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+
+  &::before,
+  &::after 
+  {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 1px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before 
+  {
+    top: 1.4rem;
+    animation: draw 500ms linear 1s forwards;
+  }
+
+  &::after 
+  {
+    bottom: 0.4rem;
+    animation: draw 500ms linear 1s forwards;
+  }
+}
+
+@keyframes up 
+{
+  100% 
+  {
+    transform: translateY(0);
+  }
+}
+
+@keyframes draw 
+{
+  100% 
+  {
+    width: 100%;
+  }
+}
+
+
+::-webkit-scrollbar 
+{
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+  background: rgb(42, 240, 2);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+  background: #edea09;
 }
