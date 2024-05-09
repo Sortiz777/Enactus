@@ -11,17 +11,20 @@ body
   padding: 0;
 }
 
-p::before {
+p::before 
+{
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-p:hover::before {
+p:hover::before 
+{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-p::before {
+p::before 
+{
   content: " ";
   display: block;
   position: absolute;
@@ -35,7 +38,8 @@ p::before {
   transition: transform .3s ease;
 }
 
-p {
+p 
+{
   position: relative;
   font-size: 5rem;
 }
@@ -244,7 +248,7 @@ li a:hover
 
 /* Slideshow container */
 .slideshow-container
- {
+{
   max-width: 500px;
   position: relative;
   margin: auto;
