@@ -11,6 +11,35 @@ body
   padding: 0;
 }
 
+p::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+p:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+p::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: hsl(123, 82%, 45%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+p {
+  position: relative;
+  font-size: 5rem;
+}
+
 .mySlides 
 {
   display: none;
@@ -352,6 +381,7 @@ h1
   font-size: 1.5rem;
 }
 
+
 @media only screen and (max-width: 600px) 
 {
   body 
@@ -370,7 +400,7 @@ h1
     display: block;
     margin: 10px 0;
   }
-
+  
   p 
   {
     font-size: 16px;
