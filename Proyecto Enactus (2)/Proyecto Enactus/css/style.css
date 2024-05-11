@@ -51,9 +51,14 @@ p
 
 img 
 {
-  vertical-align: middle;
   border-radius: 1%;
 }
+
+.imgcontrol
+{
+  width: 450px;
+}
+
 
 .imagen 
 {
@@ -102,11 +107,6 @@ header
   color: black;
   justify-content: space-between;
   align-items: center;
-}
-
-img 
-{
-  width: 450px;
 }
 
 header h1 
@@ -489,22 +489,47 @@ h1
   width: 15px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track 
 {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb 
 {
   background: rgb(42, 240, 2);
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
 {
   background: #edea09;
+}
+
+
+aside
+{
+  float: right;
+  text-align: center;
+}
+
+nav
+{
+  margin-top: 200px;
+  margin-left: 200px;
+  float: center;
+  text-align: center;
+
+  width: 612px;
+  height: 612px;
+  background: rgb(238, 230, 20);
+  border-radius: 300px;
+  border: 20px solid rgb(30, 243, 73);
+
+}
+
+h2
+{
+  font-size: 1.5rem;
+  text-align: center;
 }
